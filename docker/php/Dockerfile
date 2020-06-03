@@ -15,11 +15,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install  \
     wget curl mc nano supervisor sudo cron \
     fontconfig libssl1.0.0 libxext6 libxrender1 xfonts-75dpi xfonts-base xdg-utils ghostscript
 
-#install node & yarn
-RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-RUN apt-get install nodejs
-RUN npm install -g yarn
-
 #install pecl extensions
 RUN pecl install channel://pecl.php.net/weakref-0.3.3
 
